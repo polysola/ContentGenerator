@@ -9,13 +9,19 @@ import {
   useAuth,
 } from "@clerk/nextjs";
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 export function Navbar() {
   const { userId } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const links = [
+    { name: "TG", href: "https://t.me/XRPCraftAI_Portal" },
+    { name: "X", href: "https://x.com/XRPCraft_AI" },
+    { name: "Pricing", href: "/pricing" },
+    { name: "Docs", href: "/docs" }
+  ];
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -34,9 +40,10 @@ export function Navbar() {
         <div className="flex flex-wrap justify-between items-center max-w-6xl mx-auto">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Zap className="w-8 h-8 text-blue-500" />
+              {/* <Zap className="w-8 h-8 text-blue-500" /> */}
+              <Image src="/logo.png" width={52} height={52} alt="Logo" />
               <span className="text-xl sm:text-2xl font-bold text-white">
-                ThreadCraft AI
+              XRP Craft AI
               </span>
             </Link>
           </div>
@@ -56,16 +63,18 @@ export function Navbar() {
             } sm:block mt-4 sm:mt-0`}
           >
             <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-8">
-              {["Features", "Pricing", "Docs"].map((item) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-white transition-colors py-2 sm:py-0 relative group"
-                >
-                  {item}
-                  <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                </Link>
-              ))}
+            {links.map((item) => (
+        <a
+          key={item.name}
+          href={item.href}
+          className="text-gray-300 hover:text-white transition-colors py-2 sm:py-0 relative group"
+          target={item.href.startsWith('http') ? '_blank' : '_self'}
+          rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
+        >
+          {item.name}
+          <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+        </a>
+      ))}
               {userId && (
                 <Link
                   href="/generate"

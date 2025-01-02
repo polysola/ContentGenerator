@@ -7,7 +7,7 @@ import { MailtrapClient } from "mailtrap";
 
 const TOKEN = "05bf3445ae1a9814ecf445a6272a9db7";
 const SENDER_EMAIL = "hello@demomailtrap.com";
-const RECIPIENT_EMAIL = "mendsalbert@gmail.com";
+const RECIPIENT_EMAIL = "@gmail.com";
 
 if (!TOKEN) {
   throw new Error("MAILTRAP_TOKEN environment variable is not set");

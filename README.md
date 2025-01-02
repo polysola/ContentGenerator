@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="public/thumbnail.jpg" alt="ThreadCraft AI Logo" />
+  <img src="public/thumbnail.jpg" alt="XRP Craft Logo" />
 </p>
 
-# ThreadCraft AI: Social Media Content Generator
+# XRP Craft: Social Media Content Generator
 
-ThreadCraft AI is a powerful Next.js application that leverages AI to generate engaging content for various social media platforms. This project uses cutting-edge technologies to provide users with an intuitive interface for creating Twitter threads, Instagram captions, and LinkedIn posts.
+XRP Craft is a powerful Next.js application that leverages AI to generate engaging content for various social media platforms. This project uses cutting-edge technologies to provide users with an intuitive interface for creating Twitter threads, Instagram captions, and LinkedIn posts.
 
 ## Features
 
