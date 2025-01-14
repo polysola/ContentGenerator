@@ -17,8 +17,8 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const links = [
-    { name: "TG", href: "https://t.me/XRPCraftAI_Portal" },
-    { name: "X", href: "https://x.com/XRPCraft_AI" },
+    { name: "TG", href: "https://t.me/InspiraTextAI_Portal" },
+    { name: "X", href: "https://x.com/InspiraText_XRP" },
     { name: "Pricing", href: "/pricing" },
     { name: "Docs", href: "/docs" }
   ];
@@ -43,7 +43,7 @@ export function Navbar() {
               {/* <Zap className="w-8 h-8 text-blue-500" /> */}
               <Image src="/logo.png" width={52} height={52} alt="Logo" />
               <span className="text-xl sm:text-2xl font-bold text-white">
-              XRP Craft AI
+              XRP InspiraText
               </span>
             </Link>
           </div>

@@ -55,7 +55,7 @@ export default function Home() {
               asChild
               className="bg-transparent border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-full text-lg transition duration-300 ease-in-out"
             >
-              <Link href="https://firstledger.net/token/rHeo9Aaopf37ESJcLzgRAWm31UswUoks7k/5852504300000000000000000000000000000000">Buy Now</Link>
+              <Link href="https://firstledger.net/">Buy on First Ledger</Link>
             </Button>
           </div>
         </div>
